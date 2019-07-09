@@ -1,7 +1,7 @@
 ---
 title: 编写可维护的JavaScript代码
-date: 2019-02-09 10:35:07
-tags:编程风格
+date: 2019-02-09 11:18:35
+tags:
 ---
 
 # 编写可维护的javascript代码
@@ -113,7 +113,7 @@ null是一个特殊值,在以下场景下应当使用null
 >
 > ```js
 > if(条件){
->  doSomething();
+> doSomething();
 > }
 > ```
 >
@@ -121,7 +121,7 @@ null是一个特殊值,在以下场景下应当使用null
 >
 > ```js
 > if (条件) {
->  doSomething();
+> doSomething();
 > }
 > ```
 >
@@ -129,7 +129,7 @@ null是一个特殊值,在以下场景下应当使用null
 >
 > ```js
 > if ( 条件 ) {
->  doSomething();
+> doSomething();
 > }
 > ```
 >
@@ -144,17 +144,17 @@ null是一个特殊值,在以下场景下应当使用null
 > >    - 从第二条case语句开始,每条case语句前后各有一个空格
 > >
 > > ```js
-> >   switch (条件) {
-> >       case 1 :
-> >           //代码
-> >           break;
-> >           
-> >       case 2 :
-> >           //代码
-> >           break;
-> >      	default :
-> >           //代码
-> >   }
+> > switch (条件) {
+> >    case 1 :
+> >        //代码
+> >        break;
+> >        
+> >    case 2 :
+> >        //代码
+> >        break;
+> >   	default :
+> >        //代码
+> > }
 > > ```
 > >
 > > 2. 第二种
@@ -164,5 +164,27 @@ null是一个特殊值,在以下场景下应当使用null
 
 ### 3.3.2 case语句的连续执行
 
-> 只要是有意为之且添加了注释,就可以使用case语句的连续执
+> 只要是有意为之且添加了注释,就可以使用case语句的连续执行
+
+### 3.3.3 default
+
+> 作者倾向于在没有默认行为且写了注释的的情况下省略default
+
+## 3.4 with语句
+
+with语句可以更改包含的上下文解析变量的方式.通过with可以用局部变量和函数的形式来访问特定对象的属性和方法,这样就可以将对象前缀统统省掉.如果一段代码中书写了很多的对象成员,则可以使用with语句来缩短这段代码.
+
+```js
+var book = {
+    title: "西游记",
+    auther: "吴承恩"
+};
+
+var message = "这本书的名字是";
+
+with (book) {
+    message += title;
+    message += "作者是" + auther;
+}
+```
 
