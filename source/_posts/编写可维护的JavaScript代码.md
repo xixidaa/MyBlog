@@ -1,10 +1,10 @@
 ---
-title: 编写可维护的JavaScript代码
-date: 2019-02-09 11:18:35
+title: 编写可维护的JavaScript代码(一)
+date: 2018-02-08 11:18:35
 tags:
 ---
 
-# 编写可维护的javascript代码
+# 编写可维护的javascript代码(一)
 
 
 
@@ -188,3 +188,39 @@ with (book) {
 }
 ```
 
+## 3.5 for循环
+
+for循环有两种,一种是传统的for循环,另一种是for in 循环,用来遍历对象的属性.
+
+* for in 循环是用来遍历对象属性的.不用定以任何控制条件,循环将会有条不紊的遍历每一个对象属性,并返回属性名而不是值
+
+  >```js
+  >var keys;
+  >
+  >for (keys in obj) {
+  >    console.log("属性名是" + keys);
+  >    console.log("属性值是" + obj[keys]);
+  >}
+  >```
+
+* for in 存在的问题:他不仅遍历对象的实例属性,同样遍历从原型中继承的属性.当遍历自定义对象的属性时,往往会因为意外的结果而终止.
+
+  ```js
+     	Object.prototype.height = 180;
+      Object.prototype.weight = 80;
+  ```
+
+  解决方法:最好使用hasOwnProperty()方法来为for in 循环过滤出实例属性.
+
+  ```js
+  
+      for (keys in obj) {
+          //通过对象自身的hasOwnProperty的方法来循环过滤出对象的实例属性
+          if (obj.hasOwnProperty(keys)) {
+              console.log("属性名为:" + keys);
+              console.log("属性的值为:" + obj[keys]);
+          }
+      }
+  ```
+
+  
