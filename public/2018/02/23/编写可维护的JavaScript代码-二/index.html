@@ -15,19 +15,19 @@
   </script>
 
   
-  <title>编写可维护的JavaScript代码(一) | MyBlog</title>
+  <title>编写可维护的JavaScript代码(二) | MyBlog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编写可维护的javascript代码(一)1,编程风格1,空行处理一般来讲,在下面场景中添加空行是不错的主意 1.在方法间 2.在方法中的局部变量和第一条语句之间 3.在多行或单行文本之间 4.在方法内的逻辑片段之间插入空格,提高可读性 5.在每个流程控制语句之前(for ,if) 2,命名只要是写代码,都会涉及变量和函数,因此变量和函数的命名对于增强代码的可读性至关重要. JavaScript采">
+  <meta name="description" content="4,变量,函数和运算符4.1 变量声明变量声明是通过var来完成的.js中允许多次使用var语句,此外var语句几乎可以用在JavaScript脚本中的任意地方.  作者建议你总是将局部变量的定义,作为函数内的第一条语句 同时将所有的var语句合并为一个语句,每个变量的初始化独占一行.赋值运算符应当对齐.对于那些没有初始值的变量来说,他们应当出现在var语句的尾部  1234567891011fu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编写可维护的JavaScript代码(一)">
-<meta property="og:url" content="http://yoursite.com/2018/02/08/编写可维护的JavaScript代码/index.html">
+<meta property="og:title" content="编写可维护的JavaScript代码(二)">
+<meta property="og:url" content="http://yoursite.com/2018/02/23/编写可维护的JavaScript代码-二/index.html">
 <meta property="og:site_name" content="MyBlog">
-<meta property="og:description" content="编写可维护的javascript代码(一)1,编程风格1,空行处理一般来讲,在下面场景中添加空行是不错的主意 1.在方法间 2.在方法中的局部变量和第一条语句之间 3.在多行或单行文本之间 4.在方法内的逻辑片段之间插入空格,提高可读性 5.在每个流程控制语句之前(for ,if) 2,命名只要是写代码,都会涉及变量和函数,因此变量和函数的命名对于增强代码的可读性至关重要. JavaScript采">
+<meta property="og:description" content="4,变量,函数和运算符4.1 变量声明变量声明是通过var来完成的.js中允许多次使用var语句,此外var语句几乎可以用在JavaScript脚本中的任意地方.  作者建议你总是将局部变量的定义,作为函数内的第一条语句 同时将所有的var语句合并为一个语句,每个变量的初始化独占一行.赋值运算符应当对齐.对于那些没有初始值的变量来说,他们应当出现在var语句的尾部  1234567891011fu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-10T11:05:53.782Z">
+<meta property="og:updated_time" content="2019-07-10T13:27:20.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编写可维护的JavaScript代码(一)">
-<meta name="twitter:description" content="编写可维护的javascript代码(一)1,编程风格1,空行处理一般来讲,在下面场景中添加空行是不错的主意 1.在方法间 2.在方法中的局部变量和第一条语句之间 3.在多行或单行文本之间 4.在方法内的逻辑片段之间插入空格,提高可读性 5.在每个流程控制语句之前(for ,if) 2,命名只要是写代码,都会涉及变量和函数,因此变量和函数的命名对于增强代码的可读性至关重要. JavaScript采">
+<meta name="twitter:title" content="编写可维护的JavaScript代码(二)">
+<meta name="twitter:description" content="4,变量,函数和运算符4.1 变量声明变量声明是通过var来完成的.js中允许多次使用var语句,此外var语句几乎可以用在JavaScript脚本中的任意地方.  作者建议你总是将局部变量的定义,作为函数内的第一条语句 同时将所有的var语句合并为一个语句,每个变量的初始化独占一行.赋值运算符应当对齐.对于那些没有初始值的变量来说,他们应当出现在var语句的尾部  1234567891011fu">
   
     <link rel="alternate" href="/atom.xml" title="MyBlog" type="application/atom+xml">
   
@@ -145,13 +145,13 @@
     <div class="container post-box">
         <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
             <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
-                <strong>编写可维护的JavaScript代码(一)</strong>
+                <strong>编写可维护的JavaScript代码(二)</strong>
             </h1>
             
             <div class="is-flex align-center">
                 <img class="post-avatar" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-shadow-circle-512.png">
                 <span style="padding:0 10px;"> <span class="sub-title">By</span> Wang Ning</span>
-                <span class="post-date sub-title">at: 2018-02-08</span>
+                <span class="post-date sub-title">at: 2018-02-23</span>
             </div>
             
                 <div>
@@ -160,147 +160,92 @@
             
         </div>
         <div class="content" style="overflow: auto">
-            <h1 id="编写可维护的javascript代码-一"><a href="#编写可维护的javascript代码-一" class="headerlink" title="编写可维护的javascript代码(一)"></a>编写可维护的javascript代码(一)</h1><h2 id="1-编程风格"><a href="#1-编程风格" class="headerlink" title="1,编程风格"></a>1,编程风格</h2><h3 id="1-空行处理"><a href="#1-空行处理" class="headerlink" title="1,空行处理"></a>1,空行处理</h3><p>一般来讲,在下面场景中添加空行是不错的主意</p>
-<p>1.在方法间</p>
-<p>2.在方法中的局部变量和第一条语句之间</p>
-<p>3.在多行或单行文本之间</p>
-<p>4.在方法内的逻辑片段之间插入空格,提高可读性</p>
-<p>5.在每个流程控制语句之前(for ,if)</p>
-<h3 id="2-命名"><a href="#2-命名" class="headerlink" title="2,命名"></a>2,命名</h3><p>只要是写代码,都会涉及变量和函数,因此变量和函数的命名对于增强代码的可读性至关重要.</p>
-<p>JavaScript采用的是ECMAScript规则,即是遵循驼峰式大小命名法.</p>
+            <h2 id="4-变量-函数和运算符"><a href="#4-变量-函数和运算符" class="headerlink" title="4,变量,函数和运算符"></a>4,变量,函数和运算符</h2><h3 id="4-1-变量声明"><a href="#4-1-变量声明" class="headerlink" title="4.1 变量声明"></a>4.1 变量声明</h3><p>变量声明是通过var来完成的.js中允许多次使用var语句,此外var语句几乎可以用在JavaScript脚本中的任意地方.</p>
 <blockquote>
-<p>驼峰式大小命名法:由小写字母开始,后续的每一个单词的首字母都要大写</p>
+<p>作者建议你总是将局部变量的定义,作为函数内的第一条语句</p>
+<p>同时将所有的var语句合并为一个语句,每个变量的初始化独占一行.赋值运算符应当对齐.对于那些没有初始值的变量来说,他们应当出现在var语句的尾部</p>
 </blockquote>
-<h4 id="2-1-变量"><a href="#2-1-变量" class="headerlink" title="2.1  变量"></a>2.1  变量</h4><p>变量名应当总是遵守驼峰命名法,并且命名的前缀应该是名词</p>
-<h4 id="2-2-函数"><a href="#2-2-函数" class="headerlink" title="2.2 函数"></a>2.2 函数</h4><p>对于函数和方法命名来说,第一个应该是动词,下列有一些动词常见的约定</p>
-<p>can/has/is: 函数返回一个布尔值</p>
-<p>get: 函数返回一个非布尔值</p>
-<p>set: 函数用来保存一个值</p>
-<h4 id="2-3-常量"><a href="#2-3-常量" class="headerlink" title="2.3 常量"></a>2.3 常量</h4><p>为了区别常量和变量,产生一个通用的命名约定(来自C语言)</p>
-<blockquote>
-<p>使用大写字母和下划线来命名,下划线用以分隔单词</p>
-</blockquote>
-<h3 id="3-null"><a href="#3-null" class="headerlink" title="3,null"></a>3,null</h3><p>null是一个特殊值,在以下场景下应当使用null</p>
-<blockquote>
-<ul>
-<li>用来初始化一个变量,这个变量可能赋值为一个对象</li>
-<li>用来和一个已经初始化的变量比较,这个变量可以是也可以不是一个对象</li>
-<li>当函数的参数期望是对象时,用做函数传入</li>
-<li>当函数的参数期望是对象时,用作返回值传入</li>
-</ul>
-</blockquote>
-<p>下面的一些场景不应当使用null</p>
-<blockquote>
-<ul>
-<li>不要使用null来检测是否传入某个参数</li>
-<li>不要用null来检测一个未初始化的变量</li>
-</ul>
-</blockquote>
-<h2 id="2-注释"><a href="#2-注释" class="headerlink" title="2,注释"></a>2,注释</h2><h3 id="0-使用注释"><a href="#0-使用注释" class="headerlink" title="0 ,使用注释"></a>0 ,使用注释</h3><blockquote>
-<ul>
-<li>添加注释的一般原则是,在需要让代码变得清晰地时候添加注释</li>
-<li>难以理解的代码需要添加注释</li>
-<li>当你的代码有可能被别的开发者认为有错误时,也需要添加注释</li>
-</ul>
-</blockquote>
-<h3 id="1-单行注释"><a href="#1-单行注释" class="headerlink" title="1.单行注释"></a>1.单行注释</h3><blockquote>
-<ul>
-<li>独占一行的注释,用来解释下一行代码.这行注释之前总是有一个空行,且缩进的层级和下一行代码保持一致.</li>
-<li>在代码行的尾部的注释.代码结束到注释之间至少有一个缩进.注释(包括前面的代码部分)不应当超过单行文本的最大字符数限制,如果超过了,应将注释放在该行代码的上方</li>
-<li>被注释掉的大段代码</li>
-</ul>
-</blockquote>
-<h3 id="2-多行文本"><a href="#2-多行文本" class="headerlink" title="2,多行文本"></a>2,多行文本</h3><blockquote>
-<p>多行文本总是出现在将要描述的代码之前,注释和代码之间没有空行间隔.和单行注释一行,多行注释之前应该有一空行,且缩进层级和其描述的代码保持一致.</p>
-</blockquote>
-<h2 id="3-语句和表达式"><a href="#3-语句和表达式" class="headerlink" title="3,语句和表达式"></a>3,语句和表达式</h2><h3 id="3-0"><a href="#3-0" class="headerlink" title="3.0"></a>3.0</h3><blockquote>
-<p>绝大多数js开发者都认可这一点:无论是块语句包含的是一行还是多行代码,都应当使用花括号,因为省略花括号会造成一些困惑</p>
-<ul>
-<li>if</li>
-<li>for</li>
-<li>while</li>
-<li>do…while…</li>
-<li>try…catch…finally </li>
-</ul>
-</blockquote>
-<h3 id="3-1-花括号的对齐方式"><a href="#3-1-花括号的对齐方式" class="headerlink" title="3.1, 花括号的对齐方式"></a>3.1, 花括号的对齐方式</h3><blockquote>
-<ul>
-<li>将花括号放置在块语句中第一句代码的末尾</li>
-<li>将左花括号放置于块语句首行的下一行</li>
-</ul>
-</blockquote>
-<h3 id="3-2-块语句间隔"><a href="#3-2-块语句间隔" class="headerlink" title="3.2,块语句间隔"></a>3.2,块语句间隔</h3><blockquote>
-<ul>
-<li>第一种,块语句,圆括号,和左花括号之间没有空格间隙</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span>(条件)&#123;</span><br><span class="line">&gt; doSomething();</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<ul>
-<li>第二种,在左花括号之前和右花括号之后各添加一个空格</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span> (条件) &#123;</span><br><span class="line">&gt; doSomething();</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<ul>
-<li>第三种,在左圆括号后和右圆括号前各添加一个空格</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">if</span> ( 条件 ) &#123;</span><br><span class="line">&gt; doSomething();</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p>个人倾向于第二种风格,这是一三风格的折中</p>
-</blockquote>
-<h3 id="3-3-switch语句"><a href="#3-3-switch语句" class="headerlink" title="3.3 switch语句"></a>3.3 switch语句</h3><blockquote>
-<h3 id="3-3-1-缩进"><a href="#3-3-1-缩进" class="headerlink" title="3.3.1  缩进"></a>3.3.1  缩进</h3><blockquote>
-<ol>
-<li>第一种<ul>
-<li>每条case语句相对于switch关键字都缩进一个层级</li>
-<li>从第二条case语句开始,每条case语句前后各有一个空格</li>
-</ul>
-</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; &gt; <span class="keyword">switch</span> (条件) &#123;</span><br><span class="line">&gt; &gt;    <span class="keyword">case</span> <span class="number">1</span> :</span><br><span class="line">&gt; &gt;        <span class="comment">//代码</span></span><br><span class="line">&gt; &gt;        <span class="keyword">break</span>;</span><br><span class="line">&gt; &gt;        </span><br><span class="line">&gt; &gt;    <span class="keyword">case</span> <span class="number">2</span> :</span><br><span class="line">&gt; &gt;        <span class="comment">//代码</span></span><br><span class="line">&gt; &gt;        <span class="keyword">break</span>;</span><br><span class="line">&gt; &gt;   	<span class="keyword">default</span> :</span><br><span class="line">&gt; &gt;        <span class="comment">//代码</span></span><br><span class="line">&gt; &gt; &#125;</span><br><span class="line">&gt; &gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<ol start="2">
-<li><p>第二种</p>
-<blockquote>
-<ul>
-<li>case关键字保持和switch关键字左对齐</li>
-<li>语句中并没有空行的存在</li>
-</ul>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-</blockquote>
-<h3 id="3-3-2-case语句的连续执行"><a href="#3-3-2-case语句的连续执行" class="headerlink" title="3.3.2 case语句的连续执行"></a>3.3.2 case语句的连续执行</h3><blockquote>
-<p>只要是有意为之且添加了注释,就可以使用case语句的连续执行</p>
-</blockquote>
-<h3 id="3-3-3-default"><a href="#3-3-3-default" class="headerlink" title="3.3.3 default"></a>3.3.3 default</h3><blockquote>
-<p>作者倾向于在没有默认行为且写了注释的的情况下省略default</p>
-</blockquote>
-<h2 id="3-4-with语句"><a href="#3-4-with语句" class="headerlink" title="3.4 with语句"></a>3.4 with语句</h2><p>with语句可以更改包含的上下文解析变量的方式.通过with可以用局部变量和函数的形式来访问特定对象的属性和方法,这样就可以将对象前缀统统省掉.如果一段代码中书写了很多的对象成员,则可以使用with语句来缩短这段代码.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> book = &#123;</span><br><span class="line">    title: <span class="string">"西游记"</span>,</span><br><span class="line">    auther: <span class="string">"吴承恩"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> message = <span class="string">"这本书的名字是"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> (book) &#123;</span><br><span class="line">    message += title;</span><br><span class="line">    message += <span class="string">"作者是"</span> + auther;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">items</span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> value = <span class="number">10</span>,</span><br><span class="line">        result = value + <span class="number">10</span>,</span><br><span class="line">        i,</span><br><span class="line">        len;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> (i=<span class="number">0</span>, len=items.length; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(items[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="3-5-for循环"><a href="#3-5-for循环" class="headerlink" title="3.5 for循环"></a>3.5 for循环</h2><p>for循环有两种,一种是传统的for循环,另一种是for in 循环,用来遍历对象的属性.</p>
-<ul>
-<li><p>for in 循环是用来遍历对象属性的.不用定以任何控制条件,循环将会有条不紊的遍历每一个对象属性,并返回属性名而不是值</p>
+<p>前端瓶颈:    数学思维   +   算法思维   +  逻辑思维</p>
+<h3 id="4-2-函数声明"><a href="#4-2-函数声明" class="headerlink" title="4.2, 函数声明"></a>4.2, 函数声明</h3><p>和变量声明一样,函数声明也会被JavaScript引擎提前.所以推荐总是先声明函数,再使用函数</p>
+<h3 id="4-3-函数调用间隔"><a href="#4-3-函数调用间隔" class="headerlink" title="4.3, 函数调用间隔"></a>4.3, 函数调用间隔</h3><p>一般来讲,对于函数调用的写法推荐的风格是:<strong>在函数名和左括号之间没有空格</strong>,这样做是为了将他和块语句区分开.</p>
+<h3 id="4-3-立即调用函数"><a href="#4-3-立即调用函数" class="headerlink" title="4.3, 立即调用函数"></a>4.3, 立即调用函数</h3><p>JavaScript中允许声明匿名函数(本身没有命名的函数),并将匿名函数的值赋值给变量或者属性.</p>
+<p>为了让立即执行函数能够一眼看出来,可以将函数用一对圆括号包裹起来.</p>
+<h3 id="4-5-严格模式"><a href="#4-5-严格模式" class="headerlink" title="4.5, 严格模式"></a>4.5, 严格模式</h3><p>ES5 引入了严格模式,希望通过这种方式来谨慎的解析JavaScript代码,以减少错误.</p>
 <blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">var</span> keys;</span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="keyword">for</span> (keys <span class="keyword">in</span> obj) &#123;</span><br><span class="line">&gt;    <span class="built_in">console</span>.log(<span class="string">"属性名是"</span> + keys);</span><br><span class="line">&gt;    <span class="built_in">console</span>.log(<span class="string">"属性值是"</span> + obj[keys]);</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="string">"use strict"</span>;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-</li>
-<li><p>for in 存在的问题:他不仅遍历对象的实例属性,同样遍历从原型中继承的属性.当遍历自定义对象的属性时,往往会因为意外的结果而终止.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.height = <span class="number">180</span>;</span><br><span class="line"><span class="built_in">Object</span>.prototype.weight = <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
+<p>这条编译指令不仅用于全局,也适用于局部,比如函数内.<strong>不建议</strong>将”use strict”用于<strong>全局</strong>,因为会使文件中的所有代码都以严格模式进行解析.</p>
+<ul>
+<li><p>如果你希望在多个函数中使用严格模式而不必写多行use strict的话,可以使用立即执行函数.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//好的写法</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">    "use strict"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//代码</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">//代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 
-<p>解决方法:最好使用hasOwnProperty()方法来为for in 循环过滤出实例属性.</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"><span class="keyword">for</span> (keys <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="comment">//通过对象自身的hasOwnProperty的方法来循环过滤出对象的实例属性</span></span><br><span class="line">    <span class="keyword">if</span> (obj.hasOwnProperty(keys)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"属性名为:"</span> + keys);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"属性的值为:"</span> + obj[keys]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 </li>
 </ul>
+<h3 id="4-6-相等"><a href="#4-6-相等" class="headerlink" title="4.6, 相等"></a>4.6, 相等</h3><p>由于JavaScript有<strong>强制类型转换</strong>机制, JavaScript判断相等操作是很微妙的.对于某些运算来说,为了得到正确的结果,强制类型转化会驱使某种类型的变量自动转化成其他的不同类型,这往往会得到意想不到的结果.</p>
+<p>发生强制类型转化的最常见情形是,使用了判断相等运算符==和!=的时候.当要比较两个值的类型不相等时,这两个运算符都有强制类型转化(<strong>数据类型相同时则不会有类型转化</strong>).但在很多情况下,代码并不按照我所期望的方式运行.</p>
+<ul>
+<li><p>如果将数字和字符串进行比较的时候,字符串首先会转换成数字,然后执行比较.</p>
+</li>
+<li><p>如果一个布尔值和数字进行比较,布尔值会首先转成数字,然后执行比较.false转化成0,true转化成1.</p>
+</li>
+<li><p>如果其中一个值是对象而另一个不是,则会先调用对象的valueof()方法,得到原始类型进行比较.如果没有定义valueof(),则调用toString().之后比较的操作就和上文中提到的多类型值比较情形一样了.</p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">var</span> object = &#123;</span><br><span class="line">&gt;    toString: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">&gt;        <span class="keyword">return</span> <span class="string">"0x19"</span>;</span><br><span class="line">&gt;    &#125;</span><br><span class="line">&gt;&#125;;</span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="built_in">console</span>.log(object == <span class="number">25</span>); <span class="comment">//true</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>还有一种涉及到强制类型转化的场景和null和undefined有关.根据ESMAScript标准规范的描述,这两个特殊值被认为是相等的.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 
+
+
+</li>
+</ul>
+<ul>
+<li>由于强制类型转化的缘故,我们推荐不要使用==和!=,而是采用三等.</li>
+</ul>
+<h3 id="4-7-原始包装类型"><a href="#4-7-原始包装类型" class="headerlink" title="4.7,原始包装类型"></a>4.7,原始包装类型</h3><p>JavaScript中的一个不易被了解且被常常误解的方面是,这门语言对<strong>原始包装类型(primitive wrapper types)</strong>的依赖.</p>
+<ul>
+<li><p>JavaScript中有三种原始包装类型:String,Boolean和Number.每种类型的作用域都代表全局作用域中的一个构造函数,并分别表示各自对应的原始值的对象.<strong>原始包装类型的主要作用是让原始值具有对象般的行为</strong>                           </p>
+<blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="keyword">var</span> name = <span class="string">"zhangsan"</span>;</span><br><span class="line">&gt;<span class="built_in">console</span>.log(name.toUpperCase);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+</blockquote>
+<table><tr><td bgcolor="yellow"><font color="red">尽管name是一个字符串,是原始类型而不是对象,但你仍然可以使用诸如toUpperCase的方法,即将字符串当做对象来对待.这种做法之所以行得通,是因为在这条语句的表象背后,是因为JavaScript引擎创建了String的类型的新实例,紧跟着就被销毁了,当再次需要时就会又创建另一个对象.需要尤为注意的一点，原始值本身不具有对象特性，比如1.toString()是报错的，必须这样做：var a = 1;a.toString()</font></td></tr></table>
+
+</li>
+</ul>
+<h2 id="5-UI层的松耦合"><a href="#5-UI层的松耦合" class="headerlink" title="5, UI层的松耦合"></a>5, UI层的松耦合</h2><p>在web开发过程中，用户界面（UI）是三个彼此隔离而又相互作用的层定义的。</p>
+<ul>
+<li>HTML用来定义页面的数据和语义。</li>
+<li>CSS用来给页面添加样式，创建视觉特征。</li>
+<li>JavaScript用来给页面添加行为，使其更具交互性。</li>
+</ul>
+<h3 id="5-1-什么是松耦合"><a href="#5-1-什么是松耦合" class="headerlink" title="5.1, 什么是松耦合"></a>5.1, 什么是松耦合</h3><ul>
+<li>紧耦合:如果两个组件耦合太紧，则说明一个组件和另一个组件直接相关，这样的话，如果修改一个组件的逻辑，那么另外一个组件的逻辑也要修改。</li>
+<li>松耦合:当你能够做到修改一个组件而不需要更改其他组件的时候，你就做到了松耦合。对于多人的大型系统来说，有很多人参与维护代码，松耦合对于代码的可维护性来说至关重要。当一个大型系统的每一个组件的内容都有了限制，你就做到了松耦合。</li>
+<li>如果一个Web UI是松耦合的,则很容易调试。和文本或者结构相关的问题，通过查找HTML就能定位。当发生了样式相关的问题，你就知道问题出在CSS。最后，对于那些行为相关的问题，你直接去JS中查找问题的所在，这种能力是WEB界面的可维护性的核心部分。</li>
+</ul>
+<h3 id="5-2-将JavaScript从CSS中抽离"><a href="#5-2-将JavaScript从CSS中抽离" class="headerlink" title="5.2,将JavaScript从CSS中抽离"></a>5.2,将JavaScript从CSS中抽离</h3><p>在IE8之前的浏览器版本存在CSS表达式的特性，它允许你将JavaScript代码直接插入到CSS里面，这样可以在CSS中直接执行运算或者其他操作。浏览器会以高频率重复计算CSS表达式，这严重影响性能。另外对于代码维护来说也是一场灾难。</p>
+<h3 id="5-3-将CSS从JS中抽离"><a href="#5-3-将CSS从JS中抽离" class="headerlink" title="5.3, 将CSS从JS中抽离"></a>5.3, 将CSS从JS中抽离</h3><p>保持CSS和JS之间清晰的分离是很有挑战性的。我们经常将样式数据和JS混写在一起。通过脚本修改样式的最流行的一种方式是，直接修改Dom元素的style属性。style属性是一个对象，包含了可以读取和修改的CSS属性。</p>
+<ul>
+<li>将CSS从JS分离意味着所有的样式信息都应当保持在CSS中。当需要通过JS修改元素样式的时候，最佳的方法是操作CSS的className。</li>
+</ul>
+<h3 id="5-4-将JS从HTML中分离"><a href="#5-4-将JS从HTML中分离" class="headerlink" title="5.4,  将JS从HTML中分离"></a>5.4,  将JS从HTML中分离</h3><ul>
+<li>你的绝大多数的JS代码都应当包含在外部文件中，并在页面中通过<script>标签进行引用。在HTML代码中也不应该直接给on属性挂载事件处理程序。相反，一旦外部脚本文件加载至页面，则使用JS方法添加事件处理程序。</li>
+<li>在HTML中嵌入JS代码的另一种方法是使用<script>标签，标签内包含的内联的脚本代码。</li>
+<li>作者建议最好将JS代码放入内置文件中，以确保HTML代码中不会有内联的JS代码。这样做的原因是出于紧急调试的考虑。</li>
+</ul>
+<h3 id="5-5-将HTML代码从JS中抽离"><a href="#5-5-将HTML代码从JS中抽离" class="headerlink" title="5.5, 将HTML代码从JS中抽离"></a>5.5, 将HTML代码从JS中抽离</h3><p>当需要调试一个文本或者是结构性问题时，你更希望从HTML中调试。一个典型的情形是给innerHTML属性赋值的时候。<br>将HTML代码嵌入到JS代码中是非常不好的实践，原因如下：</p>
+<ul>
+<li>1.它增加了跟踪文本和结构性文本问题的复杂度。</li>
+<li>2.代码的可维护性不高。<br>解决方法:在JS中通过向服务器发送请求获取数据,在客户端使用模板引擎,实现向页面中注入HTML代码.</li>
+</ul>
+</script></li></ul>
         </div>
         <div class="post-reply">
             
